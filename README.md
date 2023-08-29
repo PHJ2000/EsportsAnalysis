@@ -1,11 +1,21 @@
 # EsportsAnalysis
 Repository for esports data science
+## 접기 시작
+
+<details>
+<summary>타이틀 접기/타이틀 펼치기</summary>
+
+<!-- summary 아래 한칸 공백 두어야함 -->
 
 # Title1
 ## Titile2
 ### Titile3
 #### Title4
 ##### Title5
+
+</details>
+
+
 ###### 가로줄 넣기
 ---
 - - - -
