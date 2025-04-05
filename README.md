@@ -1,99 +1,67 @@
-# EsportsAnalysis
-Repository for esports data science
-## 접기 시작
+# Esports Analysis - 게이머 키 입력 데이터 분석 프로젝트
 
-<details>
-<summary>타이틀 접기/타이틀 펼치기</summary>
+## 프로젝트 개요
+이 프로젝트는 **Esports(리그 오브 레전드 등)에서 게이머의 키보드 입력 데이터를 수집하고 분석하는 시스템**입니다.
+`pynput` 라이브러리를 활용하여 키 입력 빈도를 기록하고, 게임 플레이 스타일을 분석할 수 있습니다.
 
-<!-- summary 아래 한칸 공백 두어야함 -->
+## 주요 기능
+- **키보드 입력 데이터 수집** (`pynput` 활용)
+- **특정 키(`q`, `w`, `e`, `r`, `d`, `f`, `a`, `1`~`7`, `s`)의 입력 횟수 추적**
+- **엔터 키를 활용한 데이터 수집 활성화/비활성화 기능**
+- **데이터를 `pandas`를 사용하여 분석 가능**
 
-# Title1
-## Titile2
-### Titile3
-#### Title4
-##### Title5
+## 프로젝트 구조
+```
+EsportsAnalysis/
+│── test.py  # 키 입력 데이터 수집 코드
+│── hello.py  # 테스트용 코드
+│── test3.py  # 출력문 포함 (분석 기능 없음)
+│── tset2.py  # 출력문 포함 (분석 기능 없음)
+│── README.md  # 프로젝트 설명 파일
+```
 
-</details>
+## 설치 및 실행 방법
+### 1. 필수 라이브러리 설치
+```bash
+pip install pynput numpy pandas matplotlib
+```
 
+### 2. 키 입력 데이터 수집 실행
+```bash
+python test.py
+```
 
-###### 가로줄 넣기
----
-- - - -
-****
-* * *
-
-안녕하세요
-
-반갑습니다
-
-잘가요
-
-다음에 뵈어요
-
-하고 싶은 프로젝트 혹은 관심있는 프로젝트
-yolo8과 드론을 이용한 주차장 사진 인식모듈
-
-
-
-어제 배운 것들
-
-키보드 인식을 이용한 데이터 수집
-
-opgg 크롤링 해오는 방식(개발자 모드에 들어가서 각각의 배치를 확인)
-
-stl(약어)를 이용한 웹페이지 제작(간단하게 디자인 및 실시간 서버)
-
-git을 쓸 때는 두 줄을 띄어서 써야지 띄움 표시가 된다.
-
-git explore를 구독하면 가장 이슈가 되고 있는 레포리지를 3개 메일로 보내준다.
-
-우리 프로그래머는 github로 청첩장을 보낼 수 있어야 한다.
-
->   사람은 오로지 가슴으로만 올바로 볼 수 있다.
->
->   본질적인 것은 눈에 보이지 않는다.
->
-> 
->   -생텍쥐페리-
-   
-1. 집에가서 파이썬 공부하기
-2. 집에가서 롤하기
-3. 집에가서 유튜브 보기
-4. 집에가서 자기
-
--탑
-
--정글
-
--미드
-    *탭을 쓰면 들여쓰기가 된다
-    *카타리나
-
--원딜
-
-  *트리스타나
-
--서폿
-
-**리그오브레전드**에서 중요한 것은 ~킬먹기가 아니라~ *타워 꺠기이다.*
-오늘도 ***즐거운 게임*** 되시길
-
-### 소스코드 넣는 법 (백틱 쓰기 // 숫자 1 옆에 있는 표기가 ` 입니다.)
-
+### 3. 수집된 데이터 활용 예시
 ```python
-print("Hello World")
+import pandas as pd
+
+# 예제 데이터
+key_data = {
+    "q": 94,
+    "w": 59,
+    "e": 79,
+    "r": 33,
+    "d": 7,
+    "f": 10,
+}
+
+# 데이터프레임 생성
+df = pd.DataFrame.from_dict(key_data, orient='index', columns=['Frequency'])
+print(df)
 ```
 
-```javascript
-<script>
-  len now = new Date()
-  len display = new.toLocaleTimeString()
-  document.write('현재 시각은 ${display} 입니다.')
-</script>
-```
-<https://www.google.com/>
+## 필요 라이브러리
+- `pynput`
+- `numpy`
+- `pandas`
+- `matplotlib`
 
-[구글](https://www.google.com/)
+## 기여 방법
+1. 본 레포지토리를 포크합니다.
+2. 새로운 브랜치를 생성합니다.
+3. 변경 사항을 커밋하고 푸시합니다.
+4. Pull Request를 생성하여 기여합니다.
 
-[구글](https://www.google.com/, "클릭하면 구글로 이동합니다")
+## 라이선스
+이 프로젝트는 MIT 라이선스를 따릅니다.
 
